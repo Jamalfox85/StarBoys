@@ -10,6 +10,7 @@ body {
   color: white;
   a {
     text-decoration: none;
+    color: white;
   }
   a:hover {
     color: gray;
@@ -25,7 +26,12 @@ body {
     animation: stars 4s linear infinite;
   }
   h1 {
+    position: relative;
     padding: 4rem;
+    z-index: 1;
+    a:hover {
+      color: white;
+    }
   }
   .nav {
     position: relative;
@@ -79,7 +85,7 @@ body {
     }
     h3 {
       position: relative;
-      top: 35%;
+      top: 50%;
       text-align: center;
     }
   }
@@ -97,7 +103,7 @@ body {
     }
     h3 {
       position: relative;
-      top: 35%;
+      top: 50%;
       text-align: center;
     }
   }
@@ -114,7 +120,7 @@ body {
     }
     h3 {
       position: relative;
-      top: 35%;
+      top: 50%;
       text-align: center;
     }
   }
@@ -131,7 +137,7 @@ body {
     }
     h3 {
       position: relative;
-      top: 35%;
+      top: 50%;
       text-align: center;
     }
   }
@@ -148,14 +154,14 @@ body {
     }
     h3 {
       position: relative;
-      top: 35%;
+      top: 50%;
       text-align: center;
     }
   }
   .light-dark {
     position: relative;
     grid-column: 4/5;
-    grid-row: 3;
+    grid-row: 3/5;
     background-image: url(../images/dark.jpg);
     box-shadow: 20px 20px black;
     overflow: hidden;
@@ -166,42 +172,44 @@ body {
     }
     h3 {
       position: relative;
-      top: 35%;
+      top: 50%;
       text-align: center;
     }
   }
-  .tarot {
+  .horoscope {
     position: relative;
-    grid-column: 2/5;
+    grid-column: 2/4;
     grid-row: 4;
-    background-image: url(../images/tarot.jpg);
+    background-image: url(../images/horoscope.jpg);
     box-shadow: 20px 20px black;
     overflow: hidden;
-    #tarotimg {
+    #horoscopeimg {
       position: absolute;
       height: 100%;
       width: 100%;
     }
     h3 {
       position: relative;
-      top: 35%;
+      top: 50%;
       text-align: center;
     }
   }
   .footer {
+    position: relative;
     grid-column: 1/6;
     grid-row: 5;
     background-color: black;
     box-shadow: 20px 20px black;
     border-top: solid white 1rem;
     background-color: rgba(20, 19, 70, 0.5);
+    overflow: hidden;
     #stars {
       position: absolute;
       animation: stars 4s linear infinite;
     }
     p {
       position: relative;
-      font-size: 2rem;
+      font-size: 1rem;
       text-align: center;
     }
   }
@@ -213,5 +221,81 @@ body {
   }
   to {
     transform: translateX(900px);
+  }
+}
+
+/////////////
+////Signs////
+/////////////
+
+.signcontainer {
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  grid-template-rows: 1fr auto;
+  font-size: 2rem;
+  text-align: center;
+  .signnav {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    list-style-type: none;
+    border-right: 2px solid rgb(2, 20, 44);
+    li {
+      margin: 1.5rem 0rem;
+    }
+  }
+  .signmain {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    position: relative;
+
+    .button {
+      position: absolute;
+      top: 40px;
+      height: 5rem;
+      width: 10rem;
+      margin: 4rem 4rem 0rem 4rem;
+      border: 0.5rem solid rgb(2, 20, 44);
+      box-shadow: 0.2rem 0.2rem black;
+      border-radius: 100%;
+      background-image: url(../images/background.jpg);
+      color: white;
+      font-size: 2rem;
+    }
+    .next {
+      right: 0px;
+    }
+    .previous {
+      left: 0px;
+    }
+    h3 {
+      text-align: center;
+      margin: 2rem;
+    }
+    .sign {
+      border: 4px solid rgb(20, 19, 70);
+      background-color: rgba(20, 19, 70, 0.5);
+      border-radius: 30%;
+      box-shadow: 20px 20px black;
+      margin: 3rem 1rem;
+      padding: 8rem;
+      display: none;
+    }
+  }
+  .signfooter {
+    position: relative;
+    grid-column: 1/4;
+    grid-row: 2/3;
+    border-top: solid white 1rem;
+    background-color: rgba(20, 19, 70, 0.5);
+    overflow: hidden;
+    #stars {
+      position: absolute;
+      animation: stars 4s linear infinite;
+    }
+    p {
+      position: relative;
+      font-size: 1rem;
+      text-align: center;
+    }
   }
 }

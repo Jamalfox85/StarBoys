@@ -14,6 +14,7 @@ body {
 
 body a {
   text-decoration: none;
+  color: white;
 }
 
 body a:hover {
@@ -34,7 +35,13 @@ body a:hover {
 }
 
 .header h1 {
+  position: relative;
   padding: 4rem;
+  z-index: 1;
+}
+
+.header h1 a:hover {
+  color: white;
 }
 
 .header .nav {
@@ -109,7 +116,7 @@ body a:hover {
 
 .container .discover h3 {
   position: relative;
-  top: 35%;
+  top: 50%;
   text-align: center;
 }
 
@@ -133,7 +140,7 @@ body a:hover {
 
 .container .zodiac h3 {
   position: relative;
-  top: 35%;
+  top: 50%;
   text-align: center;
 }
 
@@ -157,7 +164,7 @@ body a:hover {
 
 .container .compatabilities h3 {
   position: relative;
-  top: 35%;
+  top: 50%;
   text-align: center;
 }
 
@@ -181,7 +188,7 @@ body a:hover {
 
 .container .queens h3 {
   position: relative;
-  top: 35%;
+  top: 50%;
   text-align: center;
 }
 
@@ -205,7 +212,7 @@ body a:hover {
 
 .container .star-gazing h3 {
   position: relative;
-  top: 35%;
+  top: 50%;
   text-align: center;
 }
 
@@ -215,7 +222,8 @@ body a:hover {
   -ms-grid-column-span: 1;
   grid-column: 4/5;
   -ms-grid-row: 3;
-  grid-row: 3;
+  -ms-grid-row-span: 2;
+  grid-row: 3/5;
   background-image: url(../images/dark.jpg);
   -webkit-box-shadow: 20px 20px black;
           box-shadow: 20px 20px black;
@@ -230,36 +238,37 @@ body a:hover {
 
 .container .light-dark h3 {
   position: relative;
-  top: 35%;
+  top: 50%;
   text-align: center;
 }
 
-.container .tarot {
+.container .horoscope {
   position: relative;
   -ms-grid-column: 2;
-  -ms-grid-column-span: 3;
-  grid-column: 2/5;
+  -ms-grid-column-span: 2;
+  grid-column: 2/4;
   -ms-grid-row: 4;
   grid-row: 4;
-  background-image: url(../images/tarot.jpg);
+  background-image: url(../images/horoscope.jpg);
   -webkit-box-shadow: 20px 20px black;
           box-shadow: 20px 20px black;
   overflow: hidden;
 }
 
-.container .tarot #tarotimg {
+.container .horoscope #horoscopeimg {
   position: absolute;
   height: 100%;
   width: 100%;
 }
 
-.container .tarot h3 {
+.container .horoscope h3 {
   position: relative;
-  top: 35%;
+  top: 50%;
   text-align: center;
 }
 
 .container .footer {
+  position: relative;
   -ms-grid-column: 1;
   -ms-grid-column-span: 5;
   grid-column: 1/6;
@@ -270,6 +279,7 @@ body a:hover {
           box-shadow: 20px 20px black;
   border-top: solid white 1rem;
   background-color: rgba(20, 19, 70, 0.5);
+  overflow: hidden;
 }
 
 .container .footer #stars {
@@ -280,7 +290,7 @@ body a:hover {
 
 .container .footer p {
   position: relative;
-  font-size: 2rem;
+  font-size: 1rem;
   text-align: center;
 }
 
@@ -304,5 +314,105 @@ body a:hover {
     -webkit-transform: translateX(900px);
             transform: translateX(900px);
   }
+}
+
+.signcontainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20% 60% 20%;
+      grid-template-columns: 20% 60% 20%;
+  -ms-grid-rows: 1fr auto;
+      grid-template-rows: 1fr auto;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.signcontainer .signnav {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  list-style-type: none;
+  border-right: 2px solid #02142c;
+}
+
+.signcontainer .signnav li {
+  margin: 1.5rem 0rem;
+}
+
+.signcontainer .signmain {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  position: relative;
+}
+
+.signcontainer .signmain .button {
+  position: absolute;
+  top: 40px;
+  height: 5rem;
+  width: 10rem;
+  margin: 4rem 4rem 0rem 4rem;
+  border: 0.5rem solid #02142c;
+  -webkit-box-shadow: 0.2rem 0.2rem black;
+          box-shadow: 0.2rem 0.2rem black;
+  border-radius: 100%;
+  background-image: url(../images/background.jpg);
+  color: white;
+  font-size: 2rem;
+}
+
+.signcontainer .signmain .next {
+  right: 0px;
+}
+
+.signcontainer .signmain .previous {
+  left: 0px;
+}
+
+.signcontainer .signmain h3 {
+  text-align: center;
+  margin: 2rem;
+}
+
+.signcontainer .signmain .sign {
+  border: 4px solid #141346;
+  background-color: rgba(20, 19, 70, 0.5);
+  border-radius: 30%;
+  -webkit-box-shadow: 20px 20px black;
+          box-shadow: 20px 20px black;
+  margin: 3rem 1rem;
+  padding: 8rem;
+  display: none;
+}
+
+.signcontainer .signfooter {
+  position: relative;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  border-top: solid white 1rem;
+  background-color: rgba(20, 19, 70, 0.5);
+  overflow: hidden;
+}
+
+.signcontainer .signfooter #stars {
+  position: absolute;
+  -webkit-animation: stars 4s linear infinite;
+          animation: stars 4s linear infinite;
+}
+
+.signcontainer .signfooter p {
+  position: relative;
+  font-size: 1rem;
+  text-align: center;
 }
 /*# sourceMappingURL=styles.css.map */
